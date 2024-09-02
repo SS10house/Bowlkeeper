@@ -1,0 +1,3 @@
+Options +Includes -Indexes
+AddType text/html .html 
+AddOutputFilter INCLUDES .html

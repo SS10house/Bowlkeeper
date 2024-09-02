@@ -4,31 +4,18 @@ Bowling Score Manager
 ## Roadmap
 
 ### Games Database
-- Leagues
-    - ID, Name, Alley, Location, Manager, Asst Manager
-- Seasons
-    - ID, Name, Start Date, End Date, Day Of Week, Time, Sweeper Date 1, Sweepers Date 2, Sweepers Date 3
-- Teams
-    - ID, Name
-- Players
-    - ID, Name
-- Games
-    - id, Date, Season, Team1, Team2
-- Scores
-    -id, game, player, f1a, f1b, f2a, f2b, f3a, f3b, f4a, f4b, f5a, f5b, f6a, f6b, f7a, f7b, f8a, f8b, f9a, f9b, f10a, f10b, f10c
+See: newdatabase.sql
 
-- Player Team Relationship (can have multiple entries for each player, even on same team with different start and end dates, only one active record per player/team combo)
-    - id, player, team, dateadded, datedeactive, status
-- Season League Relationship (Selecting a season in software automatically selects a league)
-    -id, season, league
-- Average Summaries (possibly write per-game summaries of each players average for that game and their running overall average - Makes less load on server when using widgets / reports)
-    - id, playerId, game, gameAverage, seasonAverage, CarrierAverage
-
+Leagues have Seasons
+Seasons have Games
+Games have Scores
 
 A "Game" is comprised of "Scores".  
 Each "Game" will have multiple "Scores" records.  
-A "Scores" record will reference: Game, Player, Team, Season, League.  
-A player can be on multiple teams in the same league but cannot have multiple scores in the same game.
+A "Scores" record will reference: Game, Player, Team,
+
+A player can be on multiple teams in the same league but cannot have multiple score records for the same game.
+
 
 ### Main Page (Publicly Visible)
 - List players and averages
@@ -42,20 +29,20 @@ A player can be on multiple teams in the same league but cannot have multiple sc
 #### Tool to Add New Games
 - Title the Game
 - Select League, Season, and Team
-- Autopopulate score entry lines for each player on the team for the selected season
-- Buttons:
-  - Reload JSON
-  - Clear Form (with a warning popup)
-  - Write Game to Database (via AJAX to a `.json` file)
+- Adds record to "Game" table
+- Adds records to "Scores" table - one for each associated player in this game
 
 #### Tool to Edit Games
-- "Game View" page has an edit button that links here, user must be logged in
-- Loads up the game into a form similar to "Add Game"
+- "Game View" page has an edit button that links here, user must be logged in.
+- Loads up the game into a form.
 - Saves to .json so you can continue editing later
 - Buttons:
   - Reload JSON (continue from another session - editing any field will probably overwrite the other session)
   - Clear Form (with a warning popup)
   - Write Game to Database (via AJAX to a `.json` file)
+
+#### - Calculate Average Tool
+    No clue, get there, when we get there.
 
 #### Configuration Page
 - Tool to Add Leagues
@@ -67,11 +54,13 @@ A player can be on multiple teams in the same league but cannot have multiple sc
 
 
 
-# Web Directory
--0 (Includes)
--1 (Images)
--2 (Data)
--3 (PHP Widgets)
--4 (PHP Widget Functions)
--manager (Management Portal)
---addgame (Game Add Tool)
+## Web Directory
+- 0 (Includes)
+- 1 (Images)
+- 2 (Data)
+- 3 (PHP Widgets)
+- 4 (PHP Widget Functions)
+- manager (Management Portal)
+-- addgame (Game Add Tool)
+
+

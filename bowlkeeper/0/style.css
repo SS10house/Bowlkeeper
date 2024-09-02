@@ -1,0 +1,120 @@
+/* Chrome-Scrollbar */
+::-webkit-scrollbar {width: 9px; height: 9px;}
+::-webkit-scrollbar-button {width: 0px;	height: 0px;}
+::-webkit-scrollbar-thumb {background: #cfe2f3;	border: 0px none #ffffff;	border-radius: 0px;}
+::-webkit-scrollbar-thumb:hover {background: #a6c0d1;}
+::-webkit-scrollbar-thumb:active {background: #a6c0d1;}
+::-webkit-scrollbar-track {background: #f3f4f7;	border: 0px none #ffffff;	border-radius: 0px;}
+::-webkit-scrollbar-track:hover {background: #f3f4f7;}
+::-webkit-scrollbar-track:active {background: #f3f4f7;}
+::-webkit-scrollbar-corner {background: #000000;}
+
+/* iE Scrollbar */
+body {
+	scrollbar-face-color:#cfe2f3;
+	scrollbar-arrow-color:#000000;
+	scrollbar-track-color:#f3f4f7;
+	scrollbar-shadow-color:#f3f4f7;
+	scrollbar-highlight-color:#f3f4f7;
+	scrollbar-3dlight-color:#f3f4f7;
+	scrollbar-darkshadow-Color:#f3f4f7;
+}
+
+/* Main Stuff */
+body {
+	font-family: 'Ubuntu', sans-serif;
+	background: #f0f8ff; /* Light blue background */
+}
+
+a {
+	font-weight: bold;
+	color: #0044cc; /* Bowling blue */
+}
+
+a:visited {
+	color: #003399; /* Darker blue */
+}
+
+a:hover {
+	color: #ff4500; /* Strike red */
+}
+
+a:active {
+	color: #660000; /* Deep red */
+}
+
+p {
+	font-size: 100%;
+}
+
+h1 {
+	font-size: 250%;
+	color: #003399; /* Dark blue for headings */
+}
+
+h2 {
+	font-size: 150%;
+	color: #0044cc; /* Slightly lighter blue */
+}
+
+h3 {
+	font-size: 125%;
+	font-weight: normal;
+	color: #0066cc; /* Medium blue */
+}
+
+button {
+    background-color: #ff4500; /* Strike red */
+    border: none;
+	border-radius: 12px;
+    color: white;
+}
+
+ul {
+	list-style-position: inside;
+}
+
+ol {
+	list-style-position: inside;
+}
+
+#content {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	min-width: 600px;
+}
+
+#head {
+	text-align: center;
+	position: fixed; top: 0;
+	width: 100%;
+	margin-top: 0px;
+	background: #000080; /* Navy blue */
+	color: #f0f8ff; /* Light blue text */
+	font-weight: bold;
+	vertical-align: middle;
+	line-height: 40px;
+	z-index: 9;
+}
+
+#head a {
+	color: #f0f8ff; /* Light blue for header links */
+	text-decoration: none;
+}
+
+#brain {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-top: 120px;
+	text-align: center;
+}
+
+/* End Main Stuff */
+/* Mines */
+.lefttext p {text-align: left;}
+.lefttext ul {text-align: left;}
+.credit {font-size: 10px;}
+.framebox {max-width: 900px; margin: 0 auto;}
+/* End Mines */
