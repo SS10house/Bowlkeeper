@@ -118,7 +118,11 @@ ol {
 .credit {font-size: 10px;}
 .framebox {max-width: 900px; margin: 0 auto;}
 /* End Mines */
-/* Game Viewer */
+/* 
+
+Game Viewer 
+
+*/
 .gameblock {
     display: inline-block;
     text-align: center;
@@ -156,12 +160,42 @@ ol {
     border: 1px solid #d4af37;
     padding: 5px;
 }
-/* Ensure subtable has no borders */
 .gameblock table td table {
-    border: none; /* Remove border from subtable */
-    border-collapse: collapse; /* Collapse borders if needed */
+    border: none;
+    border-collapse: collapse; 
+}
+.gameblock table td table td {
+    border: none; 
+}
+/* Dropdown Styling */
+select#gameSelect {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #f0e6d1; /* Creamy beige */
+    color: #6d6d6d; /* Retro gray */
+    border: 1px solid #d4af37; /* Retro gold */
+    border-radius: 12px;
+    padding: 8px 12px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
-.gameblock table td table td {
-    border: none; /* Remove border from subtable cells */
+/* Dropdown Hover and Focus States */
+select#gameSelect:hover,
+select#gameSelect:focus {
+    background-color: #f9e3b4; /* Light creamy beige on hover */
+    border-color: #e55b34; /* Darker retro orange on hover */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Option Styling */
+select#gameSelect option {
+    background-color: #f0e6d1; /* Creamy beige for options */
+    color: #6d6d6d; /* Retro gray */
+}
+
+/* Ensure options have consistent padding and appearance */
+select#gameSelect option:hover {
+    background-color: #e55b34; /* Darker retro orange on hover */
+    color: #ffffff; /* White text on hover */
 }

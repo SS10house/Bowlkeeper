@@ -1,3 +1,31 @@
+CREATE TABLE AverageSummaries (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    player_id INTEGER,
+    game_id INTEGER,
+    game_average REAL,
+    season_average REAL,
+    career_average REAL,
+    FOREIGN KEY (player_id) REFERENCES Players(id),
+    FOREIGN KEY (game_id) REFERENCES Games(id)
+)
+
+
+CREATE TABLE "Games" (
+	"id"	INTEGER,
+	"date"	DATE NOT NULL,
+	"season_id"	INTEGER,
+	"team1_id"	INTEGER,
+	"team2_id"	INTEGER,
+	"week"	INTEGER,
+	"name"	TEXT,
+	PRIMARY KEY("id" AUTOINCREMENT),
+	FOREIGN KEY("season_id") REFERENCES "Seasons"("id"),
+	FOREIGN KEY("team1_id") REFERENCES "Teams"("id"),
+	FOREIGN KEY("team2_id") REFERENCES "Teams"("id")
+)
+
+
+
 CREATE TABLE Leagues (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
@@ -5,44 +33,29 @@ CREATE TABLE Leagues (
     location TEXT,
     manager TEXT,
     asst_manager TEXT
-);
+)
 
-CREATE TABLE Seasons (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    league_id INTEGER NOT NULL,
-    name TEXT NOT NULL,
-    start_date DATE,
-    end_date DATE,
-    day_of_week TEXT,
-    time TEXT,
-    sweeper_date1 DATE,
-    sweeper_date2 DATE,
-    sweeper_date3 DATE,
-    FOREIGN KEY (league_id) REFERENCES Leagues(id)
-);
 
-CREATE TABLE Teams (
+CREATE TABLE PlayerTeamRel (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL
-);
+    player_id INTEGER,
+    team_id INTEGER,
+    date_added DATE,
+    date_deactive DATE,
+    status TEXT,
+    FOREIGN KEY (player_id) REFERENCES Players(id),
+    FOREIGN KEY (team_id) REFERENCES Teams(id)
+)
+
+
 
 CREATE TABLE Players (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL
-);
+)
 
-CREATE TABLE Games (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    date DATE NOT NULL,
-    season_id INTEGER,
-    team1_id INTEGER,
-    team2_id INTEGER,
-    week INTEGER,
-    name text,
-    FOREIGN KEY (season_id) REFERENCES Seasons(id),
-    FOREIGN KEY (team1_id) REFERENCES Teams(id),
-    FOREIGN KEY (team2_id) REFERENCES Teams(id)
-);
+
+
 
 CREATE TABLE "Scores" (
 	"id"	INTEGER,
@@ -87,24 +100,23 @@ CREATE TABLE "Scores" (
 	FOREIGN KEY("game_id") REFERENCES "Games"("id")
 )
 
-CREATE TABLE PlayerTeamRel (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    player_id INTEGER,
-    team_id INTEGER,
-    date_added DATE,
-    date_deactive DATE,
-    status TEXT,
-    FOREIGN KEY (player_id) REFERENCES Players(id),
-    FOREIGN KEY (team_id) REFERENCES Teams(id)
-);
 
-CREATE TABLE AverageSummaries (
+CREATE TABLE Seasons (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    player_id INTEGER,
-    game_id INTEGER,
-    game_average REAL,
-    season_average REAL,
-    career_average REAL,
-    FOREIGN KEY (player_id) REFERENCES Players(id),
-    FOREIGN KEY (game_id) REFERENCES Games(id)
-);
+    league_id INTEGER NOT NULL,
+    name TEXT NOT NULL,
+    start_date DATE,
+    end_date DATE,
+    day_of_week TEXT,
+    time TEXT,
+    sweeper_date1 DATE,
+    sweeper_date2 DATE,
+    sweeper_date3 DATE,
+    FOREIGN KEY (league_id) REFERENCES Leagues(id)
+)
+
+
+CREATE TABLE Teams (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL
+)

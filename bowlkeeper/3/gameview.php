@@ -73,7 +73,7 @@ if ($game_id === null) {
 
             // Display common values above the table
             echo "<div class='gameblock'>";
-            echo "League: {$first_row['league_name']} - Season: {$first_row['season_name']}<br>";
+            echo "{$first_row['league_name']} - {$first_row['season_name']}<br>";
             echo "Week: {$first_row['game_week']} - {$first_row['game_name']}<br>{$first_row['game_date']}<br>";
             echo "{$first_row['team1_name']} -VS - {$first_row['team2_name']}";
 
