@@ -21,7 +21,7 @@ A player can be on multiple teams in the same league but cannot have multiple sc
 - List players and averages
 - List past games and final scores
 - Player view
-- Game view
+- ~~Game view~~
 - Season view
 - League view
 
@@ -42,7 +42,7 @@ A player can be on multiple teams in the same league but cannot have multiple sc
   - Write Game to Database (via AJAX to a `.json` file)
 
 #### - Calculate Average Tool
-    No clue, get there, when we get there.
+No clue, get there, when we get there.
 
 #### Configuration Page
 - Tool to Add Leagues
