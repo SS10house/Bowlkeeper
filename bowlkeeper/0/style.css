@@ -1,46 +1,46 @@
 /* Chrome-Scrollbar */
 ::-webkit-scrollbar {width: 9px; height: 9px;}
-::-webkit-scrollbar-button {width: 0px;	height: 0px;}
-::-webkit-scrollbar-thumb {background: #cfe2f3;	border: 0px none #ffffff;	border-radius: 0px;}
-::-webkit-scrollbar-thumb:hover {background: #a6c0d1;}
-::-webkit-scrollbar-thumb:active {background: #a6c0d1;}
-::-webkit-scrollbar-track {background: #f3f4f7;	border: 0px none #ffffff;	border-radius: 0px;}
-::-webkit-scrollbar-track:hover {background: #f3f4f7;}
-::-webkit-scrollbar-track:active {background: #f3f4f7;}
+::-webkit-scrollbar-button {width: 0px; height: 0px;}
+::-webkit-scrollbar-thumb {background: #d4af37; border: 0px none #ffffff; border-radius: 0px;}
+::-webkit-scrollbar-thumb:hover {background: #b8963a;}
+::-webkit-scrollbar-thumb:active {background: #b8963a;}
+::-webkit-scrollbar-track {background: #f8f8f0; border: 0px none #ffffff; border-radius: 0px;}
+::-webkit-scrollbar-track:hover {background: #f8f8f0;}
+::-webkit-scrollbar-track:active {background: #f8f8f0;}
 ::-webkit-scrollbar-corner {background: #000000;}
 
 /* iE Scrollbar */
 body {
-	scrollbar-face-color:#cfe2f3;
+	scrollbar-face-color:#d4af37;
 	scrollbar-arrow-color:#000000;
-	scrollbar-track-color:#f3f4f7;
-	scrollbar-shadow-color:#f3f4f7;
-	scrollbar-highlight-color:#f3f4f7;
-	scrollbar-3dlight-color:#f3f4f7;
-	scrollbar-darkshadow-Color:#f3f4f7;
+	scrollbar-track-color:#f8f8f0;
+	scrollbar-shadow-color:#f8f8f0;
+	scrollbar-highlight-color:#f8f8f0;
+	scrollbar-3dlight-color:#f8f8f0;
+	scrollbar-darkshadow-color:#f8f8f0;
 }
 
 /* Main Stuff */
 body {
 	font-family: 'Ubuntu', sans-serif;
-	background: #f0f8ff; /* Light blue background */
+	background: #f0e6d1; /* Creamy beige background */
 }
 
 a {
 	font-weight: bold;
-	color: #0044cc; /* Bowling blue */
+	color: #e55b34; /* Classic retro orange */
 }
 
 a:visited {
-	color: #003399; /* Darker blue */
+	color: #d94f25; /* Darker retro orange */
 }
 
 a:hover {
-	color: #ff4500; /* Strike red */
+	color: #f0a500; /* Bright yellow for a pop */
 }
 
 a:active {
-	color: #660000; /* Deep red */
+	color: #c53f3f; /* Deep red */
 }
 
 p {
@@ -49,22 +49,22 @@ p {
 
 h1 {
 	font-size: 250%;
-	color: #003399; /* Dark blue for headings */
+	color: #d94f25; /* Dark retro orange for headings */
 }
 
 h2 {
 	font-size: 150%;
-	color: #0044cc; /* Slightly lighter blue */
+	color: #e55b34; /* Slightly lighter retro orange */
 }
 
 h3 {
 	font-size: 125%;
 	font-weight: normal;
-	color: #0066cc; /* Medium blue */
+	color: #f0a500; /* Bright yellow */
 }
 
 button {
-    background-color: #ff4500; /* Strike red */
+    background-color: #f0a500; /* Bright yellow */
     border: none;
 	border-radius: 12px;
     color: white;
@@ -90,8 +90,8 @@ ol {
 	position: fixed; top: 0;
 	width: 100%;
 	margin-top: 0px;
-	background: #000080; /* Navy blue */
-	color: #f0f8ff; /* Light blue text */
+	background: #6d6d6d; /* Retro gray */
+	color: #c41d1d; /* Creamy beige text */
 	font-weight: bold;
 	vertical-align: middle;
 	line-height: 40px;
@@ -99,7 +99,7 @@ ol {
 }
 
 #head a {
-	color: #f0f8ff; /* Light blue for header links */
+	color: #f9e3b4; /* Creamy beige for header links */
 	text-decoration: none;
 }
 
@@ -118,3 +118,50 @@ ol {
 .credit {font-size: 10px;}
 .framebox {max-width: 900px; margin: 0 auto;}
 /* End Mines */
+/* Game Viewer */
+.gameblock {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.split {
+    color: #e55b34;
+    font-weight: bold;
+}
+
+.nosplit {
+    color: #f0a500;
+}
+
+.white {
+    background-color: #f8f8f0; /* Soft off-white */
+}
+
+.yella {
+    background-color: #f9e3b4; /* Creamy beige */
+}
+
+.gameblock table {
+    margin: auto;
+    border-collapse: collapse;
+    border: 1px solid #d4af37;
+}
+
+.gameblock table th,
+.gameblock table td {
+    border: 1px solid #d4af37;
+    padding: 5px;
+}
+/* Ensure subtable has no borders */
+.gameblock table td table {
+    border: none; /* Remove border from subtable */
+    border-collapse: collapse; /* Collapse borders if needed */
+}
+
+.gameblock table td table td {
+    border: none; /* Remove border from subtable cells */
+}
