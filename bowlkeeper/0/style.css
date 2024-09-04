@@ -131,14 +131,21 @@ Game Viewer
     padding: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.strike {
+    background-color: #c1e46f; /* Example color for strike */
+}
+
+.spare {
+    background-color: #dce46f; /* Example color for spare */
+}
 
 .split {
     color: #e55b34;
     font-weight: bold;
 }
 
-.nosplit {
-    color: #f0a500;
+.normalball {
+	color: black;
 }
 
 .white {
@@ -154,19 +161,41 @@ Game Viewer
     border-collapse: collapse;
     border: 1px solid #d4af37;
 }
-
 .gameblock table th,
 .gameblock table td {
     border: 1px solid #d4af37;
     padding: 5px;
 }
 .gameblock table td table {
-    border: none;
-    border-collapse: collapse; 
+    border-collapse: collapse;
+	border: none;
 }
 .gameblock table td table td {
-    border: none; 
+    border-collapse: collapse;
+    border-left: 1px solid #f0a500;
+    border-right: 1px solid #f0a500; 
+	border-top: none;
+	border-bottom: none;
 }
+
+/* Remove border on the first and last cells of each row to avoid double borders */
+.gameblock table td table td:first-child {
+    border-left: none;
+}
+.gameblock table td table td:last-child {
+    border-right: none;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Dropdown Styling */
 select#gameSelect {
     font-family: 'Ubuntu', sans-serif;
