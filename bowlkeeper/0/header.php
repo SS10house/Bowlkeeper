@@ -1,3 +1,3 @@
-<header>
-<p id="head"><a href="https://bowlkeeper.sstenhouse.com">Bowlkeeper</a></p>
+<header id="header">
+<p><a href="https://bowlkeeper.sstenhouse.com">Bowlkeeper</a><br></p>
 </header>

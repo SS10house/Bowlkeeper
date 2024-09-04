@@ -21,6 +21,7 @@ A player can be on multiple teams in the same league but cannot have multiple sc
 - List players and averages
 - List past games and final scores
 - Player view
+  - how many open frames you got, strikes you got, splits, your ave and your total series.
 - ~~Game view~~
 - Season view
 - League view

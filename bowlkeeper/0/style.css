@@ -21,50 +21,84 @@ body {
 }
 
 /* Main Stuff */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+	z-index: 1000; 
+	border-bottom: 4px solid #d4af37; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    background: #6d6d6d;
+    vertical-align: middle;
+    text-align: center;
+    color: #b8963a;
+    font-size: 240%;
+    font-weight: bold;
+
+}
+
+header a, header a:visited, header a:hover, header a:active{
+	color: #cbac57; 
+	text-decoration: none;
+}
+
 body {
 	font-family: 'Ubuntu', sans-serif;
-	background: #f0e6d1; /* Creamy beige background */
+	background: #f0e6d1; 
 }
 
 a {
 	font-weight: bold;
-	color: #e55b34; /* Classic retro orange */
+	color: #e55b34;
 }
 
 a:visited {
-	color: #d94f25; /* Darker retro orange */
+	color: #d94f25; 
 }
 
 a:hover {
-	color: #f0a500; /* Bright yellow for a pop */
+	color: #f0a500; 
 }
 
 a:active {
-	color: #c53f3f; /* Deep red */
+	color: #c53f3f; 
 }
 
 p {
-	font-size: 100%;
+	margin: 0;
+    padding: 0;
 }
-
 h1 {
 	font-size: 250%;
-	color: #d94f25; /* Dark retro orange for headings */
+	color: #d94f25; 
 }
 
 h2 {
 	font-size: 150%;
-	color: #e55b34; /* Slightly lighter retro orange */
+	color: #e55b34; 
 }
 
 h3 {
 	font-size: 125%;
 	font-weight: normal;
-	color: #f0a500; /* Bright yellow */
+	color: #f0a500;
 }
 
+hr {
+    border: 0;
+    height: 4px;
+    background: #d4af37;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
 button {
-    background-color: #f0a500; /* Bright yellow */
+    background-color: #f0a500; 
     border: none;
 	border-radius: 12px;
     color: white;
@@ -79,50 +113,27 @@ ol {
 }
 
 #content {
-	position: relative;
-	width: 100%;
-	min-height: 100%;
-	min-width: 600px;
-}
-
-#head {
-	text-align: center;
-	position: fixed; top: 0;
-	width: 100%;
-	margin-top: 0px;
-	background: #6d6d6d; /* Retro gray */
-	color: #c41d1d; /* Creamy beige text */
-	font-weight: bold;
-	vertical-align: middle;
-	line-height: 40px;
-	z-index: 9;
-}
-
-#head a {
-	color: #f9e3b4; /* Creamy beige for header links */
-	text-decoration: none;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    min-width: 600px;
+    margin-top: 120px; /* Adjust based on the height of your header */
 }
 
 #brain {
 	margin-left: 5px;
 	margin-right: 5px;
 	margin-bottom: 0px;
-	margin-top: 120px;
 	text-align: center;
 }
 
 /* End Main Stuff */
-/* Mines */
-.lefttext p {text-align: left;}
-.lefttext ul {text-align: left;}
-.credit {font-size: 10px;}
-.framebox {max-width: 900px; margin: 0 auto;}
-/* End Mines */
-/* 
+
+/***********
 
 Game Viewer 
 
-*/
+***********/
 .gameblock {
     display: inline-block;
     text-align: center;
@@ -132,16 +143,17 @@ Game Viewer
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .strike {
-    background-color: #c1e46f; /* Example color for strike */
+    background-color: rgba(212, 175, 55, 0.225); 
+	font-weight: bold;
 }
 
 .spare {
-    background-color: #dce46f; /* Example color for spare */
+    background-color: rgba(205, 127, 50, 0.225); 
+	font-weight: bold;
 }
 
 .split {
     color: #e55b34;
-    font-weight: bold;
 }
 
 .normalball {
@@ -149,11 +161,11 @@ Game Viewer
 }
 
 .white {
-    background-color: #f8f8f0; /* Soft off-white */
+    background-color: #f8f8f0;
 }
 
 .yella {
-    background-color: #f9e3b4; /* Creamy beige */
+    background-color: #f9e3b4; 
 }
 
 .gameblock table {
@@ -187,15 +199,6 @@ Game Viewer
 }
 
 
-
-
-
-
-
-
-
-
-
 /* Dropdown Styling */
 select#gameSelect {
     font-family: 'Ubuntu', sans-serif;
@@ -204,7 +207,7 @@ select#gameSelect {
     border: 1px solid #d4af37; /* Retro gold */
     border-radius: 12px;
     padding: 8px 12px;
-    font-size: 16px;
+    font-size: 120%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, border-color 0.3s;
 }

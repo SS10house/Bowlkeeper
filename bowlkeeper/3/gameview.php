@@ -215,8 +215,8 @@ Sc.f9score,
             echo "<table>
                     <tr>
                         <th>Set</th>
-                        <th>Player Name</th>
-                        <th>Player Team Name</th>
+                        <th>Player</th>
+                        <th>Team</th>
                         <th>1</th>
                         <th>2</th>
                         <th>3</th>

@@ -12,4 +12,5 @@
 <link href="/style.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 <link rel="icon" type="image/png" href="/favicon.png">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="0/jquery-3.7.1.min.js"></script>
+<script src="0/bowl.js"></script>
