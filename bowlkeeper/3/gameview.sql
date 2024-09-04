@@ -173,4 +173,4 @@ FROM
 WHERE
     G.id = :game_id
 ORDER BY
-    P.name;
+    Sc.game_set, T.name, P.name;

@@ -189,6 +189,9 @@ Game Viewer
 	border-top: none;
 	border-bottom: none;
 }
+.gameblock table tr:not(:first-child):hover {
+    background-color: rgba(235, 108, 86, 0.225);
+}
 
 /* Remove border on the first and last cells of each row to avoid double borders */
 .gameblock table td table td:first-child {
