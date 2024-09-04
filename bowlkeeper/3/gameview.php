@@ -33,17 +33,17 @@ if ($game_id === null) {
                 CASE WHEN Sc.f10as = 1 THEN 'split' WHEN Sc.f10as = 0 THEN 'nosplit' ELSE 'unknown' END AS f10as_class,
                 CASE WHEN Sc.f10bs = 1 THEN 'split' WHEN Sc.f10bs = 0 THEN 'nosplit' ELSE 'unknown' END AS f10bs_class,
                 CASE WHEN Sc.f10cs = 1 THEN 'split' WHEN Sc.f10cs = 0 THEN 'nosplit' ELSE 'unknown' END AS f10cs_class,
-                Sc.f1a, Sc.f1b,
-                Sc.f2a, Sc.f2b,
-                Sc.f3a, Sc.f3b,
-                Sc.f4a, Sc.f4b,
-                Sc.f5a, Sc.f5b,
-                Sc.f6a, Sc.f6b,
-                Sc.f7a, Sc.f7b,
-                Sc.f8a, Sc.f8b,
-                Sc.f9a, Sc.f9b,
-                CASE WHEN Sc.f10c = 0 THEN '&nbsp;' ELSE Sc.f10c END AS f10c_display,
-                Sc.f10a, Sc.f10b, Sc.f10c
+                Sc.f1a, Sc.f1b, Sc.f1score,
+                Sc.f2a, Sc.f2b, Sc.f2score,
+                Sc.f3a, Sc.f3b, Sc.f3score,
+                Sc.f4a, Sc.f4b, Sc.f4score,
+                Sc.f5a, Sc.f5b, Sc.f5score,
+                Sc.f6a, Sc.f6b, Sc.f6score,
+                Sc.f7a, Sc.f7b, Sc.f7score,
+                Sc.f8a, Sc.f8b, Sc.f8score,
+                Sc.f9a, Sc.f9b, Sc.f9score,
+                Sc.f10a, Sc.f10b, Sc.f10c,
+                Sc.f10scorea, Sc.f10scoreb, Sc.f10scorec
             FROM
                 Scores Sc
                 INNER JOIN Games G ON Sc.game_id = G.id
@@ -109,21 +109,21 @@ if ($game_id === null) {
                         <td>{$row['player_name']}</td>
                         <td>{$row['player_team_name']}</td>
                         
-                        <td class='{$row['f1s_class']}'>{$row['f1a']} | {$row['f1b']}</td>
-                        <td class='{$row['f2s_class']}'>{$row['f2a']} | {$row['f2b']}</td>
-                        <td class='{$row['f3s_class']}'>{$row['f3a']} | {$row['f3b']}</td>
-                        <td class='{$row['f4s_class']}'>{$row['f4a']} | {$row['f4b']}</td>
-                        <td class='{$row['f5s_class']}'>{$row['f5a']} | {$row['f5b']}</td>
-                        <td class='{$row['f6s_class']}'>{$row['f6a']} | {$row['f6b']}</td>
-                        <td class='{$row['f7s_class']}'>{$row['f7a']} | {$row['f7b']}</td>
-                        <td class='{$row['f8s_class']}'>{$row['f8a']} | {$row['f8b']}</td>
-                        <td class='{$row['f9s_class']}'>{$row['f9a']} | {$row['f9b']}</td>
+                        <td class='{$row['f1s_class']}'>{$row['f1a']} | {$row['f1b']}<br>{$row['f1score']}</td>
+                        <td class='{$row['f2s_class']}'>{$row['f2a']} | {$row['f2b']}<br>{$row['f2score']}</td>
+                        <td class='{$row['f3s_class']}'>{$row['f3a']} | {$row['f3b']}<br>{$row['f3score']}</td>
+                        <td class='{$row['f4s_class']}'>{$row['f4a']} | {$row['f4b']}<br>{$row['f4score']}</td>
+                        <td class='{$row['f5s_class']}'>{$row['f5a']} | {$row['f5b']}<br>{$row['f5score']}</td>
+                        <td class='{$row['f6s_class']}'>{$row['f6a']} | {$row['f6b']}<br>{$row['f6score']}</td>
+                        <td class='{$row['f7s_class']}'>{$row['f7a']} | {$row['f7b']}<br>{$row['f7score']}</td>
+                        <td class='{$row['f8s_class']}'>{$row['f8a']} | {$row['f8b']}<br>{$row['f8score']}</td>
+                        <td class='{$row['f9s_class']}'>{$row['f9a']} | {$row['f9b']}<br>{$row['f9score']}</td>
                         <td>
                             <table style='border: none; border-collapse: collapse; width: 100%; text-align: right;'>
                                 <tr>
-                                    <td class='{$row['f10as_class']}'>{$row['f10a']} | </td>
-                                    <td class='{$row['f10bs_class']}'>{$row['f10b']} | </td>
-                                    <td class='{$row['f10cs_class']}'>{$row['f10c_display']}</td>
+                                    <td class='{$row['f10as_class']}'>{$row['f10a']}<br>{$row['f10scorea']}</td>
+                                    <td class='{$row['f10bs_class']}'>{$row['f10b']}<br>{$row['f10scoreb']}</td>
+                                    <td class='{$row['f10cs_class']}'>{$row['f10c']}<br>{$row['f10scorec']}</td>
                                 </tr>
                             </table>
                         </td>
